@@ -14,6 +14,10 @@
 @end
 
 @implementation DetailViewController
+@synthesize TextLabel1 = _TextLabel1;
+@synthesize TextLabel2 = _TextLabel2;
+@synthesize OutText1 = _OutText1;
+@synthesize OutText2 = _OutText2;
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
@@ -61,6 +65,10 @@
 
 - (void)viewDidUnload
 {
+    [self setTextLabel1:nil];
+    [self setTextLabel2:nil];
+    [self setOutText1:nil];
+    [self setOutText2:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -112,4 +120,15 @@
     self.masterPopoverController = nil;
 }
 
+- (IBAction)Accel_butt:(id)sender {
+    //self.OutText1.text = @"yes";
+    int x = [sender tag];
+    x++;
+    NSString* s = [NSString stringWithFormat:@"Клик N %d",x];
+    
+    self.OutText1.text = s;
+    self.OutText2.text = s;
+    
+    [sender setTag:x];
+}
 @end

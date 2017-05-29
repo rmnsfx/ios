@@ -14,4 +14,15 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
+- (IBAction)Accel_butt:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *TextLabel1;
+
+@property (weak, nonatomic) IBOutlet UITextField *TextLabel2;
+
+@property (weak, nonatomic) IBOutlet UILabel *OutText1;
+
+@property (weak, nonatomic) IBOutlet UILabel *OutText2;
+
 @end
