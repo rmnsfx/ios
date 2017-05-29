@@ -121,14 +121,19 @@
 }
 
 - (IBAction)Accel_butt:(id)sender {
-    //self.OutText1.text = @"yes";
-    int x = [sender tag];
-    x++;
-    NSString* s = [NSString stringWithFormat:@"Клик N %d",x];
+
     
-    self.OutText1.text = s;
+    int A = [self.TextLabel1.text intValue];
+    int f = [self.TextLabel2.text intValue];
+    
+    double V = 112.5 * A / f;
+    double S = 450 * V / f;
+    
+    NSString* v = [NSString stringWithFormat:@"%f",V];
+    NSString* s = [NSString stringWithFormat:@"%f",S];
+    
+    self.OutText1.text = v;
     self.OutText2.text = s;
     
-    [sender setTag:x];
 }
 @end

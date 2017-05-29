@@ -264,7 +264,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="y0Q-BP-k4J">
-                                <rect key="frame" x="203" y="219" width="74" height="21"/>
+                                <rect key="frame" x="210" y="219" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -282,6 +282,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Скорость" id="N2a-Qb-UdL"/>
                     <connections>
+                        <outlet property="OutText1" destination="y0Q-BP-k4J" id="S8N-Iq-QT3"/>
+                        <outlet property="OutText2" destination="JO4-72-iLt" id="Lz0-Dx-zez"/>
                         <outlet property="TextInput1" destination="70F-L7-LKO" id="gLG-UK-uIG"/>
                         <outlet property="TextInput2" destination="Oos-CN-nEO" id="9eF-bL-Gmj"/>
                     </connections>
@@ -371,6 +373,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Перемещение" id="hWR-TM-4h9"/>
                     <connections>
+                        <outlet property="OutText1" destination="POl-eN-Z1u" id="BpO-8S-zzo"/>
+                        <outlet property="OutText2" destination="m9H-mE-muW" id="h4Q-C4-DhW"/>
                         <outlet property="TextInput1" destination="6RY-ER-VpW" id="chY-M7-NIe"/>
                         <outlet property="TextInput2" destination="t1P-2E-pUk" id="w27-5e-8cU"/>
                     </connections>
@@ -395,6 +399,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController2.h"/>
             <relationships>
                 <relationship kind="action" name="Speed_Button:"/>
+                <relationship kind="outlet" name="OutText1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="OutText2" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="TextInput1" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="TextInput2" candidateClass="UITextField"/>
             </relationships>
@@ -403,6 +409,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController3.h"/>
             <relationships>
                 <relationship kind="action" name="Mov_Button:"/>
+                <relationship kind="outlet" name="OutText1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="OutText2" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="TextInput1" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="TextInput2" candidateClass="UITextField"/>
             </relationships>

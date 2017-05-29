@@ -9,8 +9,10 @@
 #import "DetailViewController2.h"
 
 @implementation DetailViewController2
+@synthesize OutText2;
 @synthesize TextInput1;
 @synthesize TextInput2;
+@synthesize OutText1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +52,8 @@
 {
     [self setTextInput1:nil];
     [self setTextInput2:nil];
+    [self setOutText1:nil];
+    [self setOutText2:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -62,5 +66,17 @@
 }
 
 - (IBAction)Speed_Button:(id)sender {
+    
+    int V = [self.TextInput1.text intValue];
+    int f = [self.TextInput2.text intValue];
+    
+    double A = 0.00888 * V * f;
+    double S = 450 * V / f;
+    
+    NSString* a = [NSString stringWithFormat:@"%f",A];
+    NSString* s = [NSString stringWithFormat:@"%f",S];
+    
+    self.OutText1.text = a;
+    self.OutText2.text = s;
 }
 @end

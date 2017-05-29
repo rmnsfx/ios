@@ -14,6 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *TextInput2;
 
+@property (weak, nonatomic) IBOutlet UILabel *OutText1;
+
+@property (weak, nonatomic) IBOutlet UILabel *OutText2;
+
 - (IBAction)Speed_Button:(id)sender;
 
 @end

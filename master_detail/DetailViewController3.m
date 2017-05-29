@@ -11,6 +11,8 @@
 @implementation DetailViewController3
 @synthesize TextInput1;
 @synthesize TextInput2;
+@synthesize OutText1;
+@synthesize OutText2;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +52,8 @@
 {
     [self setTextInput1:nil];
     [self setTextInput2:nil];
+    [self setOutText1:nil];
+    [self setOutText2:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -62,5 +66,17 @@
 }
 
 - (IBAction)Mov_Button:(id)sender {
+    
+    int S = [self.TextInput1.text intValue];
+    int f = [self.TextInput2.text intValue];
+    
+    double V = 0.00222 * S * f;
+    double A = 0.00888 * V * f;
+    
+    NSString* v = [NSString stringWithFormat:@"%f",V];
+    NSString* a = [NSString stringWithFormat:@"%f",A];
+    
+    self.OutText1.text = v;
+    self.OutText2.text = a;
 }
 @end
